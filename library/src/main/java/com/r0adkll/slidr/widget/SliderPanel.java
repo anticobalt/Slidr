@@ -143,7 +143,7 @@ public class SliderPanel extends FrameLayout {
 
         @Override
         public boolean tryCaptureView(View child, int pointerId) {
-            boolean edgeCase = !config.isEdgeOnly() || dragHelper.isEdgeTouched(edgePosition, pointerId);
+            boolean edgeCase = !config.isEdgeOnly() || isEdgeTouched;
             return child.getId() == decorView.getId() && edgeCase;
         }
 
@@ -227,7 +227,7 @@ public class SliderPanel extends FrameLayout {
     private final ViewDragHelper.Callback rightCallback = new ViewDragHelper.Callback() {
         @Override
         public boolean tryCaptureView(View child, int pointerId) {
-            boolean edgeCase = !config.isEdgeOnly() || dragHelper.isEdgeTouched(edgePosition, pointerId);
+            boolean edgeCase = !config.isEdgeOnly() || isEdgeTouched;
             return child.getId() == decorView.getId() && edgeCase;
         }
 
