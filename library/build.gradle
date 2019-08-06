@@ -3,7 +3,6 @@ apply plugin: 'maven'
 
 android {
     compileSdkVersion compileSdk
-    buildToolsVersion buildTools
 
     defaultConfig {
         minSdkVersion minSdk
